@@ -2,7 +2,7 @@ from setuptools import setup
 import setuptools
 
 setup(
-    name='zenpy',
+    name='zenpycbp',
     packages=setuptools.find_packages(),
     version='2.0.27',
     description='Python wrapper for the Zendesk API',

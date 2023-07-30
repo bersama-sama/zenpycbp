@@ -89,6 +89,7 @@ class GenericZendeskResponseHandler(ResponseHandler):
 
         :param response: the requests Response object.
         """
+
         response_json = response.json()
 
         # Special case for incremental cursor based ticket audits export.
@@ -360,21 +361,6 @@ class JobStatusesResponseHandler(GenericZendeskResponseHandler):
                 'job_status', object_json)
             response_objects['job_statuses'].append(zenpy_object)
         return response_objects
-
-
-class TagResponseHandler(ResponseHandler):
-    """ Tags aint complicated, just return them. """
-    @staticmethod
-    def applies_to(api, response):
-        result = urlparse(response.request.url)
-        return result.path.endswith('tags.json')
-
-    def deserialize(self, response_json):
-        return response_json['tags']
-
-    def build(self, response):
-        return self.deserialize(response.json())
-
 
 class SlaPolicyResponseHandler(GenericZendeskResponseHandler):
     @staticmethod

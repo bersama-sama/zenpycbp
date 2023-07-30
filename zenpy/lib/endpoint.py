@@ -74,44 +74,62 @@ class PrimaryEndpoint(BaseEndpoint):
     """
     The PrimaryEndpoint handles the most common endpoint operations.
     """
+    def supports_cbp(self):
+        cbp_supported = ['tickets', 'tags', 'users', 'organizations', 'groups', 'group_memberships',
+                         'deleted_tickets', 'satisfaction_ratings', 'ticket_metrics', 'macros', 'triggers', 'views',
+                         'suspended_tickets', 'skips', 'activities', 'automations', 'recipient_addresses']
+        return self.endpoint in cbp_supported
+
     def __call__(self, **kwargs):
         parameters = {}
         path = self.endpoint
+        _cbp_qualified = True
         for key, value in kwargs.items():
             if key == 'id':
                 path += "/{}.json".format(value)
+                _cbp_qualified &= False
             elif key == 'ids':
                 path += '/show_many.json'
                 parameters[key] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'destroy_ids':
                 path += '/destroy_many.json'
                 parameters['ids'] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'create_many':
                 path += '/create_many.json'
+                _cbp_qualified &= False
             elif key == '/create_or_update_many':
                 path = self.endpoint
             elif key == 'recover_ids':
                 path += '/recover_many.json'
                 parameters['ids'] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'update_many':
                 path += '/update_many.json'
+                _cbp_qualified &= False
             elif key == 'count_many':
                 path += '/count_many.json'
                 parameters[key] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'external_id' and path == 'tickets':
                 parameters[key] = value
+                _cbp_qualified &= False
             elif key in ('external_id', 'external_ids'):
                 external_ids = [
                     value
                 ] if not is_iterable_but_not_string(value) else value
                 path += '/show_many.json'
                 parameters['external_ids'] = ",".join(external_ids)
+                _cbp_qualified &= False
             elif key == 'update_many_external':
                 path += '/update_many.json'
                 parameters['external_ids'] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'destroy_many_external':
                 path += '/destroy_many.json'
                 parameters['external_ids'] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'label_names':
                 parameters[key] = ",".join(value)
             elif key in (
@@ -124,10 +142,13 @@ class PrimaryEndpoint(BaseEndpoint):
                     'filter_by',
             ):
                 parameters[key] = value
+                _cbp_qualified &= key not in ['page', 'cursor']
             elif key == 'since':
                 parameters[key] = value.strftime(self.ISO_8601_FORMAT)
+                _cbp_qualified &= False
             elif key == 'async':
                 parameters[key] = str(value).lower()
+                _cbp_qualified &= False
             elif key == 'include':
                 if is_iterable_but_not_string(value):
                     parameters[key] = ",".join(value)
@@ -147,7 +168,9 @@ class PrimaryEndpoint(BaseEndpoint):
             elif key.endswith('ids'):
                 # if it looks like a type of unknown id, send it through as such
                 parameters[key] = ",".join(map(str, value))
+                _cbp_qualified &= False
             elif key == 'cursor_pagination' and value:
+                _cbp_qualified &= False
                 if value is True:
                     parameters['page[size]'] = 100
                 else:
@@ -155,6 +178,9 @@ class PrimaryEndpoint(BaseEndpoint):
 
         if path == self.endpoint and not path.endswith('.json'):
             path += '.json'
+
+        if _cbp_qualified and self.supports_cbp() == True:
+            parameters['page[size]'] = 100
         return Url(path=path, params=parameters)
 
 

@@ -58,7 +58,6 @@ class BaseApi(object):
         self._response_handlers = (
             CountResponseHandler,
             DeleteResponseHandler,
-            TagResponseHandler,
             SearchExportResponseHandler,
             SearchResponseHandler,
             JobStatusesResponseHandler,
@@ -269,7 +268,6 @@ class BaseApi(object):
 
         :return: either a ResultGenerator or a Zenpy object.
         """
-
         _id = endpoint_kwargs.get('id', None)
         if _id:
             item = self.cache.get(object_type, _id)

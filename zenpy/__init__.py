@@ -1,5 +1,6 @@
 import logging
 import requests
+import os
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3 import Retry
 
@@ -52,6 +53,9 @@ from zenpy.lib.exception import ZenpyException
 from zenpy.lib.mapping import ZendeskObjectMapping
 
 log = logging.getLogger()
+debug_log = os.environ.get("DEBUG_LOG")
+if debug_log is not None:
+    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 __author__ = "facetoe"
 __version__ = "2.0.10"

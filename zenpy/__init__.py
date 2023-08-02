@@ -134,6 +134,7 @@ class Zenpy(object):
         self.organization_memberships = OrganizationMembershipApi(config)
         self.organization_fields = OrganizationFieldsApi(config)
         self.tickets = TicketApi(config)
+        self.deleted_tickets = Api(config, object_type="ticket")
         self.suspended_tickets = SuspendedTicketApi(
             config, object_type="suspended_ticket"
         )

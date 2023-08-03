@@ -77,6 +77,12 @@ class BaseApi(object):
         # is successfully processed, and then call the objects _clean_dirty() method.
         self._dirty_object = None
 
+    def supports_cbp(self):
+        cbp_supported = ['tickets', 'tags', 'users', 'organizations', 'groups', 'group_memberships',
+                         'deleted_tickets', 'satisfaction_ratings', 'ticket_metrics', 'macros', 'triggers', 'views',
+                         'suspended_tickets', 'skips', 'activities', 'automations', 'recipient_addresses']
+        return self.endpoint is not None and getattr(self.endpoint, "endpoint", "") in cbp_supported
+
     def _post(self, url, payload, content_type=None, **kwargs):
         if 'data' in kwargs:
             if content_type:
@@ -292,6 +298,8 @@ class BaseApi(object):
                                           response_objects=cached_objects,
                                           object_type=object_type)
         else:
+            if self.supports_cbp() and 'cursor_pagination' not in endpoint_kwargs.keys():
+                endpoint_kwargs['cursor_pagination'] = True
             return self._get(
                 self._build_url(
                     endpoint=endpoint(*endpoint_args, **endpoint_kwargs)))

@@ -1,3 +1,4 @@
+import os
 from time import sleep
 
 from test_api.fixtures.__init__ import (
@@ -210,7 +211,8 @@ class TestWebhooks(SingleCreateApiTestCase):
                 self.zenpy_client.webhooks.delete(webhook)
 
     def test_webhook_simple_testing(self):
-        sleep(20)  # We need to wait because of unexpected rate limits
+        if os.getenv('WH_WAIT', ''): # We need to wait because of unexpected rate limits
+            sleep(20)
         cassette_name = "{}-testing-simple".format(self.generate_cassette_name())
         with self.recorder.use_cassette(
             cassette_name=cassette_name, serialize_with="prettyjson"
@@ -223,7 +225,8 @@ class TestWebhooks(SingleCreateApiTestCase):
                 self.zenpy_client.webhooks.delete(webhook)
 
     def test_webhook_testing_with_partial_request(self):
-        sleep(20)  # We need to wait because of unexpected rate limits
+        if os.getenv('WH_WAIT', ''): # We need to wait because of unexpected rate limits
+            sleep(20)
         cassette_name = "{}-testing-request-partial".format(self.generate_cassette_name())
         with self.recorder.use_cassette(
             cassette_name=cassette_name, serialize_with="prettyjson"
@@ -236,7 +239,8 @@ class TestWebhooks(SingleCreateApiTestCase):
                 self.zenpy_client.webhooks.delete(webhook)
 
     def test_webhook_testing_with_full_request(self):
-        sleep(20)  # We need to wait because of unexpected rate limits
+        if os.getenv('WH_WAIT', ''): # We need to wait because of unexpected rate limits
+            sleep(20)
         cassette_name = "{}-testing-request-full".format(self.generate_cassette_name())
         with self.recorder.use_cassette(
             cassette_name=cassette_name, serialize_with="prettyjson"

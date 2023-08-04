@@ -93,6 +93,9 @@ class PrimaryEndpoint(BaseEndpoint):
             elif key == 'recover_ids':
                 path += '/recover_many.json'
                 parameters['ids'] = ",".join(map(str, value))
+            elif key == 'restore_ids':
+                path += '/restore_many.json'
+                parameters['ids'] = ",".join(map(str, value))
             elif key == 'update_many':
                 path += '/update_many.json'
             elif key == 'count_many':
@@ -419,14 +422,18 @@ class MacroEndpoint(BaseEndpoint):
             if len(kwargs) > 1:
                 raise ZenpyException(
                     "When specifying an id it must be the only parameter")
-
         params = dict()
         path = self.endpoint
         for key, value in kwargs.items():
-            if isinstance(value, bool):
+            if isinstance(value, bool)  and key != 'cursor_pagination':
                 value = str(value).lower()
             if key == 'id':
                 path += "/{}.json".format(value)
+            elif key == 'cursor_pagination' and value:
+                if value is True:
+                    params['page[size]'] = 100
+                else:
+                    params['page[size]'] = value
             else:
                 params[key] = value
 
@@ -637,6 +644,7 @@ class EndpointFactory(object):
     tickets.comments.redact = MultipleIDEndpoint(
         'tickets/{0}/comments/{1}/redact.json')
     tickets.deleted = PrimaryEndpoint('deleted_tickets')
+    tickets.restore = SecondaryEndpoint('deleted_tickets/%(id)s/restore.json')
     tickets.events = IncrementalEndpoint('incremental/ticket_events.json')
     tickets.incidents = SecondaryEndpoint('tickets/%(id)s/incidents.json')
     tickets.incremental = IncrementalEndpoint('incremental/tickets.json')
@@ -697,6 +705,7 @@ class EndpointFactory(object):
     views.active = PrimaryEndpoint('views/active')
     views.compact = PrimaryEndpoint('views/compact')
     views.count = SecondaryEndpoint('views/%(id)s/count.json')
+    views.primary_count = PrimaryEndpoint('views/count.json')
     views.tickets = SecondaryEndpoint('views/%(id)s/tickets')
     views.execute = SecondaryEndpoint('views/%(id)s/execute.json')
     views.export = SecondaryEndpoint('views/%(id)s/export.json')

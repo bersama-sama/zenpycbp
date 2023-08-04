@@ -58,7 +58,6 @@ class BaseApi(object):
         self._response_handlers = (
             CountResponseHandler,
             DeleteResponseHandler,
-            TagResponseHandler,
             SearchExportResponseHandler,
             SearchResponseHandler,
             JobStatusesResponseHandler,
@@ -1001,7 +1000,7 @@ class UserApi(IncrementalApi, CRUDExternalApi, TaggableApi):
         self.cache.delete(deleted_user)
         return deleted_user
 
-    def deleted(self):
+    def deleted(self, **kwargs):
         """
         List Deleted Users.
 
@@ -1010,7 +1009,7 @@ class UserApi(IncrementalApi, CRUDExternalApi, TaggableApi):
 
         :return:
         """
-        return self._get(self._build_url(self.endpoint.deleted()))
+        return self._get(self._build_url(self.endpoint.deleted(**kwargs)))
 
     @extract_id(User)
     def skips(self, user):
@@ -1312,7 +1311,7 @@ class TicketApi(RateableApi, TaggableApi, IncrementalApi, CRUDApi):
         self.cache.delete(tickets)
         return deleted_ticket_job_id
 
-    def deleted(self):
+    def deleted(self, **kwargs):
         """
         List Deleted Tickets.
 
@@ -1321,7 +1320,7 @@ class TicketApi(RateableApi, TaggableApi, IncrementalApi, CRUDApi):
 
         :return: ResultGenerator with Tickets objects with length 0 of no deleted tickets exist.
         """
-        return self._get(self._build_url(self.endpoint.deleted()))
+        return self._get(self._build_url(self.endpoint.deleted(**kwargs)))
 
     def events(self, start_time, include=None, per_page=None):
         """

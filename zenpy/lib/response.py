@@ -141,8 +141,19 @@ class GenericZendeskResponseHandler(ResponseHandler):
         for zenpy_object_name in self.object_mapping.class_mapping:
             plural_zenpy_object_name = as_plural(zenpy_object_name)
             if plural_zenpy_object_name in zenpy_objects:
-                return ZendeskResultGenerator(
-                    self, response_json, object_type=plural_zenpy_object_name)
+                meta = response_json.get('meta')
+                if meta and meta.get('has_more') is not None:
+                    return GenericCursorResultsGenerator(
+                        self,
+                        response_json,
+                        object_type=zenpy_object_name
+                    )
+                else:
+                    return ZendeskResultGenerator(
+                        self,
+                        response_json,
+                        object_type=plural_zenpy_object_name
+                    )
 
         # Bummer, bail out.
         raise ZenpyException("Unknown Response: " + str(response_json))
@@ -351,20 +362,6 @@ class JobStatusesResponseHandler(GenericZendeskResponseHandler):
                 'job_status', object_json)
             response_objects['job_statuses'].append(zenpy_object)
         return response_objects
-
-
-class TagResponseHandler(ResponseHandler):
-    """ Tags aint complicated, just return them. """
-    @staticmethod
-    def applies_to(api, response):
-        result = urlparse(response.request.url)
-        return result.path.endswith('tags.json')
-
-    def deserialize(self, response_json):
-        return response_json['tags']
-
-    def build(self, response):
-        return self.deserialize(response.json())
 
 
 class SlaPolicyResponseHandler(GenericZendeskResponseHandler):

@@ -1338,7 +1338,7 @@ class TicketApi(RateableApi, TaggableApi, IncrementalApi, CRUDApi):
                     endpoint_kwargs['restore_ids'] = tickets
                 else:
                     raise ZenpyException("A list of tickets expected")
-                url = self._build_url(endpoint=self.endpoint(**endpoint_kwargs))
+                url = self._build_url(endpoint=self.endpoint.deleted(**endpoint_kwargs))
         else:
             url = self._build_url(endpoint=self.endpoint.restore(tickets))
 

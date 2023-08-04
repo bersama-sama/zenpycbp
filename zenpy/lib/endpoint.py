@@ -637,7 +637,8 @@ class EndpointFactory(object):
     tickets.comments = SecondaryEndpoint('tickets/%(id)s/comments.json')
     tickets.comments.redact = MultipleIDEndpoint(
         'tickets/{0}/comments/{1}/redact.json')
-    tickets.deleted = PrimaryEndpoint('deleted_tickets')
+    deleted_tickets = PrimaryEndpoint('deleted_tickets')
+    tickets.deleted = deleted_tickets
     tickets.events = IncrementalEndpoint('incremental/ticket_events.json')
     tickets.incidents = SecondaryEndpoint('tickets/%(id)s/incidents.json')
     tickets.incremental = IncrementalEndpoint('incremental/tickets.json')

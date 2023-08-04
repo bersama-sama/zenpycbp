@@ -1322,6 +1322,28 @@ class TicketApi(RateableApi, TaggableApi, IncrementalApi, CRUDApi):
         """
         return self._get(self._build_url(self.endpoint.deleted(**kwargs)))
 
+    @extract_id(Ticket)
+    def restore(self, tickets):
+        """
+        Restore soft deleted tickets
+
+        :param tickets: A ticket or a list of tickets to restore
+        """
+        if isinstance(tickets, Iterable):
+            if len(tickets):
+                endpoint_kwargs = dict()
+                if type(tickets[0]) is Ticket:
+                    endpoint_kwargs['restore_ids'] = [t.id for t in tickets]
+                elif type(tickets[0]) is int:
+                    endpoint_kwargs['restore_ids'] = tickets
+                else:
+                    raise ZenpyException("A list of tickets expected")
+                url = self._build_url(endpoint=self.endpoint(**endpoint_kwargs))
+        else:
+            url = self._build_url(endpoint=self.endpoint.restore(tickets))
+
+        return self._put(url, payload=None)
+
     def events(self, start_time, include=None, per_page=None):
         """
         Retrieve TicketEvents

@@ -93,6 +93,9 @@ class PrimaryEndpoint(BaseEndpoint):
             elif key == 'recover_ids':
                 path += '/recover_many.json'
                 parameters['ids'] = ",".join(map(str, value))
+            elif key == 'restore_ids':
+                path += '/restore_many.json'
+                parameters['ids'] = ",".join(map(str, value))
             elif key == 'update_many':
                 path += '/update_many.json'
             elif key == 'count_many':
@@ -633,6 +636,7 @@ class EndpointFactory(object):
     tickets.comments.redact = MultipleIDEndpoint(
         'tickets/{0}/comments/{1}/redact.json')
     tickets.deleted = PrimaryEndpoint('deleted_tickets')
+    tickets.restore = SecondaryEndpoint('deleted_tickets/%(id)s/restore.json')
     tickets.events = IncrementalEndpoint('incremental/ticket_events.json')
     tickets.incidents = SecondaryEndpoint('tickets/%(id)s/incidents.json')
     tickets.incremental = IncrementalEndpoint('incremental/tickets.json')

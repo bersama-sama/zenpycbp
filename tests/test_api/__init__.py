@@ -64,19 +64,20 @@ def assert_empty(iterable, message, ignore_func=None):
 
 
 def teardown_package():
-    print("teardown_package called")
-    zenpy_client, recorder = configure()
-    with recorder.use_cassette(
-        cassette_name="teardown_package", serialize_with="prettyjson"
-    ):
-        n = chunk_action(zenpy_client.tickets(), zenpy_client.tickets.delete)
-        print("Deleted {} tickets".format(n))
-        n = chunk_action(
-            zenpy_client.users(),
-            zenpy_client.users.delete,
-            ignore_func=lambda x: x.role == "admin",
-        )
-        print("Deleted {} users".format(n))
+    pass
+    # print("teardown_package called")
+    # zenpy_client, recorder = configure()
+    # with recorder.use_cassette(
+    #     cassette_name="teardown_package", serialize_with="prettyjson"
+    # ):
+    #     n = chunk_action(zenpy_client.tickets(), zenpy_client.tickets.delete)
+    #     print("Deleted {} tickets".format(n))
+    #     n = chunk_action(
+    #         zenpy_client.users(),
+    #         zenpy_client.users.delete,
+    #         ignore_func=lambda x: x.role == "admin",
+    #     )
+    #     print("Deleted {} users".format(n))
 
 
 def configure():

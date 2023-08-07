@@ -95,6 +95,12 @@ def configure():
                     ).encode("utf-8")
                 ).decode('utf-8'),
         )
+        if credentials["subdomain"] != "d3v-zenpydev":
+            config.define_cassette_placeholder(
+                "https://d3v-zenpydev.zendesk.com",
+                "https://{}.zendesk.com".format(credentials["subdomain"])
+            )
+
     session = requests.Session()
     credentials["session"] = session
     zenpy_client = Zenpy(**credentials)

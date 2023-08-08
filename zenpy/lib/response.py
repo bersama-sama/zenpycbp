@@ -145,11 +145,6 @@ class GenericZendeskResponseHandler(ResponseHandler):
         if self.api.object_type in zenpy_objects:
             return zenpy_objects[self.api.object_type]
 
-        # Could be anything, if we know of this object then return it.
-        for zenpy_object_name in self.object_mapping.class_mapping:
-            if zenpy_object_name in zenpy_objects:
-                return zenpy_objects[zenpy_object_name]
-
         # Maybe a collection of known objects?
         for zenpy_object_name in self.object_mapping.class_mapping:
             plural_zenpy_object_name = as_plural(zenpy_object_name)
@@ -167,6 +162,15 @@ class GenericZendeskResponseHandler(ResponseHandler):
                         response_json,
                         object_type=plural_zenpy_object_name
                     )
+
+        # Moved this block here because views.count has a 'count' parameter \
+        # But OBP has the same with different meanings \
+        # Therefore, we need collections with OBP to be preferred.
+
+        # Could be anything, if we know of this object then return it.
+        for zenpy_object_name in self.object_mapping.class_mapping:
+            if zenpy_object_name in zenpy_objects:
+                return zenpy_objects[zenpy_object_name]
 
         # Bummer, bail out.
         raise ZenpyException("Unknown Response: " + str(response_json))

@@ -163,7 +163,16 @@ class PrimaryEndpoint(BaseEndpoint):
 
 class SecondaryEndpoint(BaseEndpoint):
     def __call__(self, id, **kwargs):
-        return Url(self.endpoint % dict(id=id), params=kwargs)
+        parameters = {}
+        for key, value in kwargs.items():
+            if key == 'cursor_pagination':
+                if value is True:
+                    parameters['page[size]'] = 100
+                elif value is not False:
+                    parameters['page[size]'] = value
+            else:
+                parameters[key] = value
+        return Url(self.endpoint % dict(id=id), params=parameters)
 
 
 class MultipleIDEndpoint(BaseEndpoint):

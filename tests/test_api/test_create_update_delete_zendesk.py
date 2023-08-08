@@ -117,7 +117,7 @@ class TestAttachmentUpload(ZenpyApiTestCase):
             return self.zenpy_client.attachments.upload(*args, **kwargs)
 
     def test_upload_with_file_obj(self):
-        with open(self.file_path, "r") as f:
+        with open(self.file_path, "rb") as f:
             upload = self.call_upload_method(f, target_name="README.md")
             self.assertTrue(isinstance(upload, Upload))
 

@@ -1,0 +1,130 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2023-08-08T07:13:13",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"automations\": [{\"id\": null, \"name\": \"testAutomation4257245f-5daf-4600-beff-db9de389ef5b\"}, {\"id\": null, \"name\": \"testAutomationefb795b4-7468-43ec-afb0-06f1bca2845b\"}, {\"id\": null, \"name\": \"testAutomationa489a765-f5b4-472a-9994-55f1beab42a3\"}, {\"id\": null, \"name\": \"testAutomation5de67c33-06f0-4a7a-83cc-b5cd04930481\"}, {\"id\": null, \"name\": \"testAutomationefd2cc16-7925-4b8d-a9db-82b74d049079\"}, {\"id\": null, \"name\": \"testAutomationbd378ee2-370f-421b-8d7a-7f527abbfeef\"}, {\"id\": null, \"name\": \"testAutomatione1ab4a27-e309-415b-81e6-a3e86527f01d\"}, {\"id\": null, \"name\": \"testAutomation76c4b5e9-421b-43df-9853-eda433590713\"}, {\"id\": null, \"name\": \"testAutomation6349c977-ea32-4ad2-b556-d139f0363be1\"}, {\"id\": null, \"name\": \"testAutomationc0041ffd-ab26-4054-88e3-8bd4acd192ce\"}, {\"id\": null, \"name\": \"testAutomation0673735d-0cc2-49e8-a17d-18b816cb6429\"}, {\"id\": null, \"name\": \"testAutomationc244a171-cc88-48e7-bef1-5e61c31eba67\"}, {\"id\": null, \"name\": \"testAutomation0818a400-b721-478a-a4e6-68a30115a3c5\"}, {\"id\": null, \"name\": \"testAutomationae720862-2f21-4f76-a001-53b7fea0b822\"}, {\"id\": null, \"name\": \"testAutomationde9143d2-8418-4096-83c5-a508b982e676\"}, {\"id\": null, \"name\": \"testAutomation0888a036-4499-43fe-9a19-94efd933bc54\"}, {\"id\": null, \"name\": \"testAutomationc41c6b4d-3eff-4d8c-a0e8-332ab9753fd4\"}, {\"id\": null, \"name\": \"testAutomation991f2769-12df-44ea-bfb5-98279fb2a6a0\"}, {\"id\": null, \"name\": \"testAutomation23b91a69-45d6-4e84-b9d5-5ddf06d707d6\"}, {\"id\": null, \"name\": \"testAutomation7f6ba6e3-236b-43d9-bf8e-37dc4a302aab\"}, {\"id\": null, \"name\": \"testAutomation98e76d50-344b-462b-8e86-c7da8fb53057\"}, {\"id\": null, \"name\": \"testAutomation003506d3-e753-42eb-aac6-c278122fd99c\"}, {\"id\": null, \"name\": \"testAutomation0935f8b6-de18-49c9-86a2-21917b03c5f0\"}, {\"id\": null, \"name\": \"testAutomation1779189a-f7e5-44a1-82eb-0471ce4be8a0\"}, {\"id\": null, \"name\": \"testAutomationbeb16110-5a2d-47a8-a4d8-326dff1a1ac1\"}, {\"id\": null, \"name\": \"testAutomation998aece5-8009-43a2-8225-ee249caa3892\"}, {\"id\": null, \"name\": \"testAutomationd75fbeea-d6a8-4e52-a37b-72dd5c72bb61\"}, {\"id\": null, \"name\": \"testAutomation0a7a8c50-52ee-4a0b-9240-69f7e2acb8ec\"}, {\"id\": null, \"name\": \"testAutomation1b9e7d77-c167-42ce-8ddc-21c0599e0cc2\"}, {\"id\": null, \"name\": \"testAutomationc6a69cdb-0640-464d-8fab-aae59cdda4b6\"}, {\"id\": null, \"name\": \"testAutomatione3b6456b-03ad-43d9-9c41-fe295519fe5a\"}, {\"id\": null, \"name\": \"testAutomation41214d3c-3b57-4cce-8ff5-551b22f76b6f\"}, {\"id\": null, \"name\": \"testAutomation34e9c40f-87de-480b-be8f-88f3536b2fde\"}, {\"id\": null, \"name\": \"testAutomationd0d33a85-58c0-45a2-8f7e-211550a60048\"}, {\"id\": null, \"name\": \"testAutomation10fcce05-9ce3-42ca-a928-3c63f7cbf588\"}, {\"id\": null, \"name\": \"testAutomationaf85b39a-62b5-478d-9b28-cee94b27194b\"}, {\"id\": null, \"name\": \"testAutomationc9b80e1c-b6e6-427e-a920-9c7bfb02aa9d\"}, {\"id\": null, \"name\": \"testAutomationf0082fa6-db87-4cd7-ac6b-d584adbad731\"}, {\"id\": null, \"name\": \"testAutomation8ed8e013-aca2-4aab-9e19-21b77dd1d224\"}, {\"id\": null, \"name\": \"testAutomatione60a9e50-b49a-4396-8a76-e9e78e6eaf68\"}, {\"id\": null, \"name\": \"testAutomation2e000814-d2c6-4ca3-adf9-5a38ffbb863e\"}, {\"id\": null, \"name\": \"testAutomation6320e4ba-dce8-4b7a-9a1e-2f1e9413d0fb\"}, {\"id\": null, \"name\": \"testAutomation729ad810-c9da-45bd-b5e1-7cd38362a9bb\"}, {\"id\": null, \"name\": \"testAutomation2c7e6712-dfcd-4ae7-86e2-9fd6e83c7f20\"}, {\"id\": null, \"name\": \"testAutomationcdfa9c31-e3f9-40a1-af2c-ded625880b60\"}, {\"id\": null, \"name\": \"testAutomation4fb62921-7929-400d-a623-bd538a15a9a8\"}, {\"id\": null, \"name\": \"testAutomation51c87480-0267-4624-af10-94aba2304348\"}, {\"id\": null, \"name\": \"testAutomation1a038ef1-2b73-4aae-aaba-9a0e09491383\"}, {\"id\": null, \"name\": \"testAutomation42111533-673e-4560-b396-57c750381668\"}, {\"id\": null, \"name\": \"testAutomation493bd6bd-4085-4fe7-b53b-125d24b744d8\"}, {\"id\": null, \"name\": \"testAutomation7077cb01-0eb1-4311-b9b8-9bf940d61537\"}, {\"id\": null, \"name\": \"testAutomationc981e138-e475-4c4c-b991-b8dae81617e4\"}, {\"id\": null, \"name\": \"testAutomation70556c47-335e-4c84-9d26-45543f4ee48d\"}, {\"id\": null, \"name\": \"testAutomation2104b980-2487-4b26-aa2e-b4b5025b393d\"}, {\"id\": null, \"name\": \"testAutomation569c7669-0cad-43d1-94e4-88be71decc00\"}, {\"id\": null, \"name\": \"testAutomation4762c9aa-62e7-427a-9b5e-6338acc2cb17\"}, {\"id\": null, \"name\": \"testAutomation0a807f5e-457e-4cb6-9d7f-04e9e9267d5f\"}, {\"id\": null, \"name\": \"testAutomation602874b6-ee3a-40b2-9b29-f0bac23991ed\"}, {\"id\": null, \"name\": \"testAutomationae56183d-2c86-4da4-9ecf-b983ca22ca5d\"}, {\"id\": null, \"name\": \"testAutomation6cf8c549-73b4-46ce-bfd2-b30e066f69d1\"}, {\"id\": null, \"name\": \"testAutomation825954ea-80e1-41ea-9424-8c8b48a33667\"}, {\"id\": null, \"name\": \"testAutomation0db9fc82-fb8c-4f06-9166-b779de8fbc2a\"}, {\"id\": null, \"name\": \"testAutomation696116c3-0ea1-4e80-b9bb-3dd9443becb4\"}, {\"id\": null, \"name\": \"testAutomationa373dda3-cb9f-430d-b1a8-57cec0827f7d\"}, {\"id\": null, \"name\": \"testAutomation117bd90b-a794-4a8a-a28d-5ca547c2668e\"}, {\"id\": null, \"name\": \"testAutomation1afc88af-7ee4-4ad9-a0d3-594df7e98ebb\"}, {\"id\": null, \"name\": \"testAutomation35624b7e-3fcb-48ec-b20b-dc44b39f07e7\"}, {\"id\": null, \"name\": \"testAutomation4e5eb497-033a-497d-ba28-cbf7c67bfacf\"}, {\"id\": null, \"name\": \"testAutomation13be389d-188e-405f-819b-450c35f23fb8\"}, {\"id\": null, \"name\": \"testAutomation1d8f6cc0-dfc3-4d4f-b062-2163a497dd3c\"}, {\"id\": null, \"name\": \"testAutomationec8da083-ca5b-4fde-94a3-626c0aca614f\"}, {\"id\": null, \"name\": \"testAutomationee8bab7a-297a-4610-8abc-e4a73e8c7479\"}, {\"id\": null, \"name\": \"testAutomation56409385-0105-4c18-be9c-42b2d4b3a9ed\"}, {\"id\": null, \"name\": \"testAutomation7a218b17-494d-4c02-9ac9-67394ec0bcb2\"}, {\"id\": null, \"name\": \"testAutomationcd1df178-be92-4c2a-aba9-a38610208fc0\"}, {\"id\": null, \"name\": \"testAutomation7a8eeac7-b2d3-49a7-b735-63648323521e\"}, {\"id\": null, \"name\": \"testAutomationbc79a9fc-d2d2-43b0-93d9-8be525354af8\"}, {\"id\": null, \"name\": \"testAutomation964c6fac-94f6-47fd-8b9e-a7abab7c8922\"}, {\"id\": null, \"name\": \"testAutomation087a7393-2e7f-4cf7-a191-b1bbaa959619\"}, {\"id\": null, \"name\": \"testAutomatione174a6cb-11ca-4eb5-9632-2701331f6b31\"}, {\"id\": null, \"name\": \"testAutomation1d003493-9916-4694-a5be-87f86ee3a4c6\"}, {\"id\": null, \"name\": \"testAutomationf743c75e-c7a4-46da-9e1b-a0040a6543ad\"}, {\"id\": null, \"name\": \"testAutomationabe5c3d7-0add-46cc-9a84-6e66a4a734eb\"}, {\"id\": null, \"name\": \"testAutomationdb4afa7b-d71f-4f24-a0a8-71f91738c453\"}, {\"id\": null, \"name\": \"testAutomation7616eba7-b2ca-4ba6-898a-b84b024dca33\"}, {\"id\": null, \"name\": \"testAutomation2f82c18a-98e3-445b-b52c-9d97be5629f1\"}, {\"id\": null, \"name\": \"testAutomatione085be0c-0d41-4f6c-9072-41357fad9608\"}, {\"id\": null, \"name\": \"testAutomationed9a77e2-55d3-4a69-a061-904dad325877\"}, {\"id\": null, \"name\": \"testAutomation491eb6e8-6dc8-4061-b5cb-460ec28e169c\"}, {\"id\": null, \"name\": \"testAutomation2e4033f0-f0dc-4fb4-90bb-6c8f5a8118b6\"}, {\"id\": null, \"name\": \"testAutomation02038c44-2e49-4f8a-bf52-d22443864f02\"}, {\"id\": null, \"name\": \"testAutomation4392a118-0180-4656-bb82-63bfc3dc8103\"}, {\"id\": null, \"name\": \"testAutomation030d8feb-0b87-4f15-9b3d-4e7f46981f65\"}, {\"id\": null, \"name\": \"testAutomationa282b058-f483-48ca-8b23-7f180ec5e270\"}, {\"id\": null, \"name\": \"testAutomationc073561f-812b-4420-a2c3-085f789b0bc6\"}, {\"id\": null, \"name\": \"testAutomation84b12070-4a8c-4371-b627-469f24b3d557\"}, {\"id\": null, \"name\": \"testAutomation27274f45-1912-40d9-8e2f-cea4644481fe\"}, {\"id\": null, \"name\": \"testAutomation1e984ec5-a75e-416b-a448-d2b8f2db01b6\"}, {\"id\": null, \"name\": \"testAutomationb5e34a30-5945-42b4-a971-e6b9c0fcb846\"}, {\"id\": null, \"name\": \"testAutomation81d6fe97-b4ab-457a-8bf1-e40842ca9198\"}]}"
+        },
+        "headers": {
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Authorization": [
+            "Basic <ZENPY-CREDENTIALS>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "7617"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Zenpy/2.0.10"
+          ]
+        },
+        "method": "POST",
+        "uri": "https://d3v-zenpydev.zendesk.com/api/v2/automations/create_many.json"
+      },
+      "response": {
+        "body": {
+          "base64_string": "H4sIAAAAAAAAA6tWSi0qyi9SslLyzCtLzMlMcc1LKcjPzCtR0lFKSS1OLsosKMnMzwPK++WXKKTll+alKNUCADwib7U1AAAA",
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "CF-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "CF-RAY": [
+            "7f35f49acc593575-WAW"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Tue, 08 Aug 2023 07:13:13 GMT"
+          ],
+          "NEL": [
+            "{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=3m%2FtIiZZznuFgFQ9zAhNFWgfX6ZW9vUeIVaJ8CXdUMf%2BG3zfyOiPYyD4icZBU05I%2BgCwHy%2FRT1bDUblloBzC3ZpH%2BpuiNFOymlFDrrz8IcrYBcfjSzJv5kc4eWbse6FHG2J9A1ELxw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "X-Zendesk-Zorg": [
+            "yes"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "rate-limit": [
+            "700"
+          ],
+          "rate-limit-remaining": [
+            "699"
+          ],
+          "rate-limit-reset": [
+            "47"
+          ],
+          "set-cookie": [
+            "_zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca; path=/; expires=Thu, 08 Aug 2024 01:52:10 GMT; secure; HttpOnly; SameSite=None",
+            "__cfruid=f595b30b6534fb1d784dfffd51d6fb172a18fbf4-1691478793; path=/; domain=.d3v-ontec.zendesk.com; HttpOnly; Secure; SameSite=None"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-rate-limit": [
+            "700"
+          ],
+          "x-rate-limit-remaining": [
+            "699"
+          ],
+          "x-request-id": [
+            "7f35f49acc593575-WAW",
+            "7f35f49acc593575-WAW"
+          ],
+          "x-runtime": [
+            "0.092025"
+          ],
+          "x-zendesk-api-version": [
+            "v2"
+          ],
+          "x-zendesk-application-version": [
+            "v17907"
+          ],
+          "x-zendesk-origin-server": [
+            "classic-app-server-6cdd477f98-ln9c4"
+          ]
+        },
+        "status": {
+          "code": 404,
+          "message": "Not Found"
+        },
+        "url": "https://d3v-zenpydev.zendesk.com/api/v2/automations/create_many.json"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.1"
+}

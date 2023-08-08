@@ -429,6 +429,9 @@ class MacroEndpoint(BaseEndpoint):
                 value = str(value).lower()
             if key == 'id':
                 path += "/{}.json".format(value)
+            elif key == 'destroy_ids':
+                path += '/destroy_many.json'
+                params['ids'] = ",".join(map(str, value))
             elif key == 'cursor_pagination' and value:
                 if value is True:
                     params['page[size]'] = 100

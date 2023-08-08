@@ -32,36 +32,11 @@ class TestTicketCreateUpdateDelete(CRUDApiTestCase):
     expected_single_result_type = TicketAudit
 
 
-class TestGroupCreateUpdateDelete(
-    SingleCreateApiTestCase, SingleUpdateApiTestCase, SingleDeleteApiTestCase
-):
-    __test__ = True
-    ZenpyType = Group
-    object_kwargs = dict(name="testGroup")
-    api_name = "groups"
-
-
 class TestUserCreateUpdateDelete(CRUDApiTestCase):
     __test__ = True
     ZenpyType = User
     object_kwargs = dict(name="testUser")
     api_name = "users"
-
-
-class TestOrganizationCreateUpdateDelete(CRUDApiTestCase):
-    __test__ = True
-    ZenpyType = Organization
-    object_kwargs = dict(name="testOrganization{}")
-    api_name = "organizations"
-
-
-class TestMacrosCreateUpdateDelete(SingleUpdateApiTestCase, SingleCreateApiTestCase):
-    __test__ = True
-    ZenpyType = Macro
-    object_kwargs = dict(
-        title="TestMacro", actions=[{"field": "status", "value": "solved"}]
-    )
-    api_name = "macros"
 
 
 class TestRecipientAddressCreateUpdateDelete(

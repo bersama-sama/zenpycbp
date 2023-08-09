@@ -167,7 +167,7 @@ class TestWebhooks(SingleCreateApiTestCase):
             cassette_name=cassette_name, serialize_with="prettyjson"
         ):
             # Needs a webhook with real invocations :(
-            webhook = self.zenpy_client.webhooks(id='01FVJ1J73MG04AJRDPD2AKKXH7')
+            webhook = self.zenpy_client.webhooks(id='01GGQ0THZQG4EMSQPYAD75ZT1R')
             count = 0
             for invocation in self.zenpy_client.webhooks.invocations(webhook):
                 count += 1
@@ -179,7 +179,7 @@ class TestWebhooks(SingleCreateApiTestCase):
             cassette_name=cassette_name, serialize_with="prettyjson"
         ):
             # Needs a webhook with real invocations :(
-            webhook = self.zenpy_client.webhooks(id='01FVJ1J73MG04AJRDPD2AKKXH7')
+            webhook = self.zenpy_client.webhooks(id='01GGQ0THZQG4EMSQPYAD75ZT1R')
             invocation = self.zenpy_client.webhooks.invocations(webhook).next()
             count = 0
             for attempt in self.zenpy_client.webhooks.invocation_attempts(webhook.id, invocation.id):
@@ -216,7 +216,7 @@ class TestWebhooks(SingleCreateApiTestCase):
             cassette_name=cassette_name, serialize_with="prettyjson"
         ):
             if self.recorder.current_cassette.is_recording():
-                sleep(20)  # Because of live api limits
+                sleep(60)  # Because of live api limits
             webhook = self.create_single_zenpy_object()
             try:
                 response = self.zenpy_client.webhooks.test(webhook)
@@ -230,7 +230,7 @@ class TestWebhooks(SingleCreateApiTestCase):
             cassette_name=cassette_name, serialize_with="prettyjson"
         ):
             if self.recorder.current_cassette.is_recording():
-                sleep(20)  # Because of live api limits
+                sleep(60)  # Because of live api limits
             webhook = self.create_single_zenpy_object()
             try:
                 response = self.zenpy_client.webhooks.test(webhook, request={"endpoint": "https://example.org/fail"})
@@ -244,7 +244,7 @@ class TestWebhooks(SingleCreateApiTestCase):
             cassette_name=cassette_name, serialize_with="prettyjson"
         ):
             if self.recorder.current_cassette.is_recording():
-                sleep(20)  # Because of live api limits
+                sleep(60)  # Because of live api limits
             webhook = self.create_single_zenpy_object()
             try:
                 response = self.zenpy_client.webhooks.test(

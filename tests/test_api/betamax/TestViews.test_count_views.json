@@ -1,7 +1,7 @@
 {
   "http_interactions": [
     {
-      "recorded_at": "2023-08-08T17:52:38",
+      "recorded_at": "2023-08-09T10:53:00",
       "request": {
         "body": {
           "encoding": "utf-8",
@@ -36,14 +36,14 @@
       "response": {
         "body": {
           "encoding": "utf-8",
-          "string": "{\"view\":{\"url\":\"https://d3v-zenpydev.zendesk.com/api/v2/views/12965335214482.json\",\"id\":12965335214482,\"title\":\"testViewNone\",\"active\":true,\"updated_at\":\"2023-08-08T17:52:37Z\",\"created_at\":\"2023-08-08T17:52:37Z\",\"default\":false,\"position\":10021,\"description\":null,\"execution\":{\"group_by\":null,\"group_order\":\"desc\",\"sort_by\":null,\"sort_order\":\"desc\",\"group\":null,\"sort\":null,\"columns\":[{\"id\":\"subject\",\"title\":\"Subject\",\"filterable\":false,\"sortable\":false},{\"id\":\"requester\",\"title\":\"Requester\",\"filterable\":true,\"sortable\":true},{\"id\":\"created\",\"title\":\"Requested\",\"filterable\":false,\"sortable\":true},{\"id\":\"updated\",\"title\":\"Updated\",\"filterable\":true,\"sortable\":true},{\"id\":\"group\",\"title\":\"Group\",\"filterable\":true,\"sortable\":true},{\"id\":\"assignee\",\"title\":\"Assignee\",\"filterable\":true,\"sortable\":true}],\"fields\":[{\"id\":\"subject\",\"title\":\"Subject\",\"filterable\":false,\"sortable\":false},{\"id\":\"requester\",\"title\":\"Requester\",\"filterable\":true,\"sortable\":true},{\"id\":\"created\",\"title\":\"Requested\",\"filterable\":false,\"sortable\":true},{\"id\":\"updated\",\"title\":\"Updated\",\"filterable\":true,\"sortable\":true},{\"id\":\"group\",\"title\":\"Group\",\"filterable\":true,\"sortable\":true},{\"id\":\"assignee\",\"title\":\"Assignee\",\"filterable\":true,\"sortable\":true}],\"custom_fields\":[]},\"conditions\":{\"all\":[{\"field\":\"status\",\"operator\":\"less_than\",\"value\":\"solved\"}],\"any\":[]},\"restriction\":null,\"raw_title\":\"testViewNone\"}}"
+          "string": "{\"view\":{\"url\":\"https://d3v-zenpydev.zendesk.com/api/v2/views/12977478533266.json\",\"id\":12977478533266,\"title\":\"testViewNone\",\"active\":true,\"updated_at\":\"2023-08-09T10:53:00Z\",\"created_at\":\"2023-08-09T10:53:00Z\",\"default\":false,\"position\":10021,\"description\":null,\"execution\":{\"group_by\":null,\"group_order\":\"desc\",\"sort_by\":null,\"sort_order\":\"desc\",\"group\":null,\"sort\":null,\"columns\":[{\"id\":\"subject\",\"title\":\"Subject\",\"filterable\":false,\"sortable\":false},{\"id\":\"requester\",\"title\":\"Requester\",\"filterable\":true,\"sortable\":true},{\"id\":\"created\",\"title\":\"Requested\",\"filterable\":false,\"sortable\":true},{\"id\":\"updated\",\"title\":\"Updated\",\"filterable\":true,\"sortable\":true},{\"id\":\"group\",\"title\":\"Group\",\"filterable\":true,\"sortable\":true},{\"id\":\"assignee\",\"title\":\"Assignee\",\"filterable\":true,\"sortable\":true}],\"fields\":[{\"id\":\"subject\",\"title\":\"Subject\",\"filterable\":false,\"sortable\":false},{\"id\":\"requester\",\"title\":\"Requester\",\"filterable\":true,\"sortable\":true},{\"id\":\"created\",\"title\":\"Requested\",\"filterable\":false,\"sortable\":true},{\"id\":\"updated\",\"title\":\"Updated\",\"filterable\":true,\"sortable\":true},{\"id\":\"group\",\"title\":\"Group\",\"filterable\":true,\"sortable\":true},{\"id\":\"assignee\",\"title\":\"Assignee\",\"filterable\":true,\"sortable\":true}],\"custom_fields\":[]},\"conditions\":{\"all\":[{\"field\":\"status\",\"operator\":\"less_than\",\"value\":\"solved\"}],\"any\":[]},\"restriction\":null,\"raw_title\":\"testViewNone\"}}"
         },
         "headers": {
           "CF-Cache-Status": [
             "DYNAMIC"
           ],
           "CF-RAY": [
-            "7f399d3c3fd635c2-WAW"
+            "7f3f73ed9fff3570-WAW"
           ],
           "Connection": [
             "keep-alive"
@@ -55,13 +55,13 @@
             "application/json; charset=utf-8"
           ],
           "Date": [
-            "Tue, 08 Aug 2023 17:52:37 GMT"
+            "Wed, 09 Aug 2023 10:53:00 GMT"
           ],
           "NEL": [
             "{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Qa2icyWem5%2F2eDHZxPzbwxdBPOJYOhSPs9Xrn%2Fz1K0C0HRABA9IetZVHWDcWV26ZWSKXtDRBbSqwDf1SQ52L6Boqaf6VsGAqWXvtg7OzMxuz%2B1JUGyPV52yoDZEnqlb8jnSOuiq0Zw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=oHlFY%2F3kjQhI9kkW9y3WB%2FsiLJ3DcuQHX9qfQCyAsOcf5BF1P8kkcsTlmVbY%2BlzbQSMpis3fIW%2FyT6WZfXRZL%2B6Uiel5NKtbT2o4mIghtNhzwyzUgvBTe%2FaTkuK4nbfrvQP7ByOlxQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Server": [
             "cloudflare"
@@ -73,10 +73,10 @@
             "max-age=0, private, must-revalidate"
           ],
           "etag": [
-            "W/\"763a4a1f0a63ee100de8e0b25fddf928\""
+            "W/\"5738c49e797973ca0d26a5436ff766ea\""
           ],
           "location": [
-            "https://d3v-zenpydev.zendesk.com/api/v2/views/12965335214482.json"
+            "https://d3v-zenpydev.zendesk.com/api/v2/views/12977478533266.json"
           ],
           "rate-limit": [
             "700"
@@ -85,11 +85,11 @@
             "699"
           ],
           "rate-limit-reset": [
-            "23"
+            "60"
           ],
           "set-cookie": [
-            "_zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca; path=/; expires=Thu, 08 Aug 2024 14:16:43 GMT; secure; HttpOnly; SameSite=None",
-            "__cfruid=190f71713d7fea391da8a6cd0602962ad5119317-1691517157; path=/; domain=.d3v-ontec.zendesk.com; HttpOnly; Secure; SameSite=None"
+            "_zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca; path=/; expires=Fri, 09 Aug 2024 09:05:17 GMT; secure; HttpOnly; SameSite=None",
+            "__cfruid=5dc4949c313e73085aeab6e3af1a926da34dc543-1691578380; path=/; domain=.d3v-ontec.zendesk.com; HttpOnly; Secure; SameSite=None"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -104,11 +104,11 @@
             "699"
           ],
           "x-request-id": [
-            "7f399d3c3fd635c2-WAW",
-            "7f399d3c3fd635c2-WAW"
+            "7f3f73ed9fff3570-WAW",
+            "7f3f73ed9fff3570-WAW"
           ],
           "x-runtime": [
-            "0.137559"
+            "0.116645"
           ],
           "x-zendesk-api-version": [
             "v2"
@@ -117,10 +117,10 @@
             "{:allowed_parameters=>{:controller=>\"views\", :action=>\"create\", :unpermitted_keys=>[\"view.id\"], :invalid_values=>[]}}"
           ],
           "x-zendesk-application-version": [
-            "v17913"
+            "v17926"
           ],
           "x-zendesk-origin-server": [
-            "classic-app-server-7d65b4cb84-ppvw6"
+            "classic-app-server-56c6d98d7f-x7sdt"
           ]
         },
         "status": {
@@ -131,7 +131,7 @@
       }
     },
     {
-      "recorded_at": "2023-08-08T17:52:38",
+      "recorded_at": "2023-08-09T10:53:00",
       "request": {
         "body": {
           "encoding": "utf-8",
@@ -151,7 +151,7 @@
             "keep-alive"
           ],
           "Cookie": [
-            "__cfruid=190f71713d7fea391da8a6cd0602962ad5119317-1691517157; _zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca"
+            "__cfruid=5dc4949c313e73085aeab6e3af1a926da34dc543-1691578380; _zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca"
           ],
           "User-Agent": [
             "Zenpy/2.0.10"
@@ -162,7 +162,7 @@
       },
       "response": {
         "body": {
-          "base64_string": "H4sIAAAAAAAAA6tWSs4vzStRsqpWKkvMKU1VsjI201EqSk0rSi3OSE2JTwRKKRkZGBnrGlgAUYihuZWpkZWxhbaBgZWBgVJtLQDf7VFkQQAAAA==",
+          "base64_string": "H4sIAAAAAAAAA6tWSs4vzStRsqpWKkvMKU1VsjI201EqSk0rSi3OSE2JTwRKKRkZGBnrGljoGliGGBpYmRpbGRhoGxgASaXaWgCCaukZQQAAAA==",
           "encoding": "utf-8",
           "string": ""
         },
@@ -171,7 +171,7 @@
             "DYNAMIC"
           ],
           "CF-RAY": [
-            "7f399d3f5c6d35c2-WAW"
+            "7f3f73ef29e23570-WAW"
           ],
           "Connection": [
             "keep-alive"
@@ -183,13 +183,13 @@
             "application/json; charset=utf-8"
           ],
           "Date": [
-            "Tue, 08 Aug 2023 17:52:38 GMT"
+            "Wed, 09 Aug 2023 10:53:00 GMT"
           ],
           "NEL": [
             "{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8KP8ryZXWBTLwYgFG0DfWH9mIO2baSfaYs2ZuANJBfy7h2QyJgYQVJwQFEFZO0jkoz%2FFuMVRVoziTyUsYR%2FX%2B7A2rdsEcoihJhPby5Yqb87iN653kYKKWxkUn31QeFYBH2oYP8Lejg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=md8yuvZIfg77R3EkugKoM9Bc8ZMUpEYFwf8VT3gyirYf4ju7aoT2zjwCwcREoeZPjXKTR4Cm6alvLBHoYQH0Ik%2B5dC%2Fzd59xgVxWJuK6nrFTO0mAfgIkKd3FSk1hUICKVRsIaYOE7A%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Server": [
             "cloudflare"
@@ -204,7 +204,7 @@
             "max-age=0, private, must-revalidate"
           ],
           "etag": [
-            "W/\"bc5683fc7052683412564d5f2aec86e0\""
+            "W/\"f31b826856adfa37f3d5781aacaa5325\""
           ],
           "rate-limit": [
             "700"
@@ -213,7 +213,7 @@
             "698"
           ],
           "rate-limit-reset": [
-            "22"
+            "60"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -228,20 +228,20 @@
             "698"
           ],
           "x-request-id": [
-            "7f399d3f5c6d35c2-WAW",
-            "7f399d3f5c6d35c2-WAW"
+            "7f3f73ef29e23570-WAW",
+            "7f3f73ef29e23570-WAW"
           ],
           "x-runtime": [
-            "0.074013"
+            "0.106495"
           ],
           "x-zendesk-api-version": [
             "v2"
           ],
           "x-zendesk-application-version": [
-            "v17913"
+            "v17926"
           ],
           "x-zendesk-origin-server": [
-            "classic-app-server-7d65b4cb84-wnvvb"
+            "classic-app-server-56c6d98d7f-4qkhp"
           ]
         },
         "status": {

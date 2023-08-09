@@ -1,7 +1,7 @@
 {
   "http_interactions": [
     {
-      "recorded_at": "2023-08-08T15:07:39",
+      "recorded_at": "2023-08-09T10:52:50",
       "request": {
         "body": {
           "encoding": "utf-8",
@@ -27,7 +27,7 @@
             "application/json"
           ],
           "Cookie": [
-            "__cfruid=129bcb95e4fe7b9e7bc7d6595f7e3e9aac3e2545-1691507246; _zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca"
+            "__cfruid=8c1b4cf25a0ec656afeeae9e37457f23b7814ef8-1691578356; _zendesk_cookie=BAhJIhl7ImRldmljZV90b2tlbnMiOnt9fQY6BkVU--0bf2100788cb010d0183feca16aaf88ccaf719ca"
           ],
           "User-Agent": [
             "Zenpy/2.0.10"
@@ -47,7 +47,7 @@
             "DYNAMIC"
           ],
           "CF-RAY": [
-            "7f38ab8f9c48355d-WAW"
+            "7f3f73b15ed5c00d-WAW"
           ],
           "Connection": [
             "keep-alive"
@@ -59,13 +59,13 @@
             "application/json; charset=utf-8"
           ],
           "Date": [
-            "Tue, 08 Aug 2023 15:07:38 GMT"
+            "Wed, 09 Aug 2023 10:52:50 GMT"
           ],
           "NEL": [
             "{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=6c5wFCgOGshZrDCBt08KYH%2BAex7x5TIvfJi53Ipzk77iCCgcRmniVJNhGcgQ3OquZ%2FqJE30P3zXi5IugY6%2FeW6doQKeCImauO3wFGvHOhCFyMg96bjA6BegBAqFrdXMJKgRWrgE8iA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=3XV%2FM2nN1qrJyLsTknxMNoe6o9L7Om2mBjH9Mf1cUSRnnLVoGFVqdjFmGlm8OazMagIClP5IACyDYTpGrd48CWNvfFxbMjDMVdSCd144DSy3WPXV6y7KQJGuYT5Uph4X9qqdkuwy6w%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Server": [
             "cloudflare"
@@ -83,10 +83,10 @@
             "700"
           ],
           "rate-limit-remaining": [
-            "654"
+            "581"
           ],
           "rate-limit-reset": [
-            "22"
+            "10"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -98,14 +98,14 @@
             "700"
           ],
           "x-rate-limit-remaining": [
-            "654"
+            "581"
           ],
           "x-request-id": [
-            "7f38ab8f9c48355d-WAW",
-            "7f38ab8f9c48355d-WAW"
+            "7f3f73b15ed5c00d-WAW",
+            "7f3f73b15ed5c00d-WAW"
           ],
           "x-runtime": [
-            "0.099119"
+            "0.086880"
           ],
           "x-zendesk-api-version": [
             "v2"
@@ -114,10 +114,10 @@
             "{:allowed_parameters=>{:controller=>\"triggers\", :action=>\"update\", :unpermitted_keys=>[\"trigger.id\"], :invalid_values=>[]}}"
           ],
           "x-zendesk-application-version": [
-            "v17913"
+            "v17926"
           ],
           "x-zendesk-origin-server": [
-            "classic-app-server-7d65b4cb84-j8z88"
+            "classic-app-server-56c6d98d7f-xd4wc"
           ]
         },
         "status": {

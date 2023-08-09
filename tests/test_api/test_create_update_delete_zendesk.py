@@ -35,7 +35,7 @@ class TestTicketCreateUpdateDelete(CRUDApiTestCase):
 class TestUserCreateUpdateDelete(CRUDApiTestCase):
     __test__ = True
     ZenpyType = User
-    object_kwargs = dict(name="testUser")
+    object_kwargs = dict(name="testUser", id="")
     api_name = "users"
 
 

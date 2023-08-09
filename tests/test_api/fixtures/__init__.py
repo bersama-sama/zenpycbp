@@ -224,12 +224,17 @@ class ModifiableApiTestCase(ZenpyApiTestCase):
             return hashlib.sha1(to_hash.encode()).hexdigest()
 
         new_kwargs = self.object_kwargs.copy()
+        if 'id' in new_kwargs:
+            new_kwargs.pop('id')
         for attr_name in new_kwargs:
             if (
                 isinstance(new_kwargs[attr_name], basestring)
                 and attr_name not in self.ignore_update_kwargs
             ):
-                new_kwargs[attr_name] += hash_of(new_kwargs[attr_name])
+                if '{}' in new_kwargs[attr_name]:
+                    new_kwargs[attr_name] = new_kwargs[attr_name].format(hash_of(new_kwargs[attr_name]))
+                else:
+                    new_kwargs[attr_name] += hash_of(new_kwargs[attr_name])
                 setattr(zenpy_object, attr_name, new_kwargs[attr_name])
                 self.assertTrue(
                     attr_name in zenpy_object._dirty_attributes,
@@ -413,7 +418,8 @@ class MultipleUpdateApiTestCase(ModifiableApiTestCase):
             for zenpy_object in self.api(ids=[r.id for r in job_status.results]):
                 modified_object, new_kwargs = self.modify_object(zenpy_object)
                 updated_objects.append((modified_object, new_kwargs))
-            self.update_method([m[0] for m in updated_objects])
+            result = self.update_method([m[0] for m in updated_objects])
+            self.wait_for_job_status(result)
             for modified_object, new_kwargs in updated_objects:
                 self.verify_object_updated(new_kwargs, modified_object)
 

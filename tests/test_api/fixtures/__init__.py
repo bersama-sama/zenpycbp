@@ -468,6 +468,7 @@ class CRUDApiTestCase(
 class PaginationTestCase(ModifiableApiTestCase):
 
     pagination_limit = 100
+    skip_obp = False
 
     def create_objects(self):
         """ Implement this method to guarantee a minimum amount of objects """
@@ -503,13 +504,15 @@ class PaginationTestCase(ModifiableApiTestCase):
                 count_default = self.count_objects_by_pagination_type()
                 count_cbp = self.count_objects_by_pagination_type(cursor_pagination=True)
                 count_cbp1 = self.count_objects_by_pagination_type(cursor_pagination=1)
-                count_obp = self.count_objects_by_pagination_type(cursor_pagination=False)
 
                 # We need at least 2 objects to check pagination
                 self.assertGreater(count_default, 1, "Default pagination returned less than 2 objects")
                 self.assertNotEqual(count_cbp, 0, "CBP returned zero")
-                self.assertNotEqual(count_obp, 0, "OBP returned zero")
-                self.assertEqual(count_cbp, count_obp, "OBP<>CBP")
                 self.assertEqual(count_cbp, count_cbp1, "CBP<>CBP[1]")
+
+                if not self.skip_obp:
+                    count_obp = self.count_objects_by_pagination_type(cursor_pagination=False)
+                    self.assertNotEqual(count_obp, 0, "OBP returned zero")
+                    self.assertEqual(count_cbp, count_obp, "OBP<>CBP")
             finally:
                 self.destroy_objects()

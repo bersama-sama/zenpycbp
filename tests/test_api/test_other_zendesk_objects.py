@@ -375,3 +375,12 @@ class TestViews(SingleCreateApiTestCase, SingleUpdateApiTestCase, SingleDeleteAp
             finally:
                 self.zenpy_client.tickets.delete(ticket)
                 self.zenpy_client.views.delete(view)
+
+
+class TestTicketAudits(PaginationTestCase):
+    __test__ = True
+    ZenpyType = TicketAudit
+    object_kwargs = {}
+    api_name = "tickets.audits"
+    pagination_limit = 10
+    skip_obp = True

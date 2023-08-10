@@ -7,6 +7,8 @@ Now you can use two unittest libraries - nose or pytest:
 ~~~
 # pip install nose
 # pip install pytest
+# pip install betamax
+# pip install betamax_serializers
 ~~~
 
 Nose is obsolete and doesn't work with Python 3.9+. 

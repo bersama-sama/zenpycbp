@@ -22,7 +22,7 @@ You don't need any other things for using recordings.
 # cd /dir/zenpycbp
 # make unittest
 or
-# pytest
+# pytest  ## Of note you may need to specify PYTHONPATH=.
 ~~~
 
 Partial testing:

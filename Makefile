@@ -12,4 +12,5 @@ reformat:
 unittest:
 	nosetests -v --stop --exe
 
-
+pytest:
+	PYTHONPATH=. pytest

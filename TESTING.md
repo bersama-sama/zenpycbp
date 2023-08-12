@@ -5,10 +5,7 @@ Zenpy uses Betamax recordings to speed up daily tests. Therefore, there are two 
 Now you can use two unittest libraries - nose or pytest:
 
 ~~~
-# pip install nose
-# pip install pytest
-# pip install betamax
-# pip install betamax_serializers
+# pip install -r requirements.dev
 ~~~
 
 Nose is obsolete and doesn't work with Python 3.9+. 

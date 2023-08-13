@@ -1,0 +1,2 @@
+1. test various VIEWS endpoints like getting tickets from a particular view, using secondary endpoint
+2. views needs full audit, for example views/count does not work
